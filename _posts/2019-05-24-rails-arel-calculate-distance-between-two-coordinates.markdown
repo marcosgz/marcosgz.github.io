@@ -137,8 +137,8 @@ distance_between = ArelSphereDistance.new(
 Address.select(
   table[Arel.star],
   distance_between.to_arel(unit: :meters).as('distance')
-).order('distance asc')
-# Address Load (4.2ms)  SELECT `addresses`.*, (6371000 * acos(cos(radians(40.790505)) * cos(radians(`addresses`.`lat`)) * cos(radians(`addresses`.`lon`) - radians(-73.971719)) + sin(radians(40.790505)) * sin(radians(`addresses`.`lat`)))) AS distance FROM `addresses`  ORDER BY distance asc
+).order('distance asc').limit(10)
+# Address Load (1.4ms)  SELECT  `addresses`.*, (6371000 * acos(cos(radians(40.790505)) * cos(radians(`addresses`.`lat`)) * cos(radians(`addresses`.`lon`) - radians(-73.971719)) + sin(radians(40.790505)) * sin(radians(`addresses`.`lat`)))) AS distance FROM `addresses`  ORDER BY distance asc LIMIT 10
 {% endhighlight %}
 
 Get addresses that are at least 1km from a given coordinate.
