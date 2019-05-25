@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+
 // Extra small screen / phone
 $screen-xs-min:              480px !default;
 // Small screen / tablet
@@ -20,6 +29,10 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
     content: "";
     clear: both;
   }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
 }
 
 @mixin screen-media($type) {

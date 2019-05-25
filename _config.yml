@@ -17,7 +17,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
+  - jemoji # http://www.emoji-cheat-sheet.com
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
