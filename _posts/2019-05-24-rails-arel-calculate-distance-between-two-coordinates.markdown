@@ -35,7 +35,7 @@ FROM locations;
 
 In practice `some_latitude` and `some_longitude` would be entered in your query as the search parameters and the `lat`/`lng` represents the value already in the database. The average radius of the Earth is 6,371 km (3,960 miles). Multipling the result of the formula by 6371 is used to make sure the results are in kilometers.
 
-If you are using similar SQL multiple times on your code or maybe if you don't like to write raw SQL on your ruby application, here is a small helper that can be useful for using [activerecord][activerecord] and [arel][arel] to compose the SQL query.
+If you are using similar SQL multiple times on your code or maybe if you don't like to write raw SQL on your ruby application, here is a small [activerecord][activerecord] and [arel][arel] helper that can be useful to compose SQL query.
 
 {% highlight ruby %}
 # frozen_string_literal: true
