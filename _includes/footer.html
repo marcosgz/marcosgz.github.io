@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="container">
+      <h2 id="get-in-touch">Get in Touch</h2>
+      <p>Feel free to contact me using my <a href="mailto:{{site.email}}">email</a> or Twitter <a href="https://twitter.com/{{site.social_links.twitter}}">@{{site.social_links.twitter}}</a>.</p>
+  </div>
+
+  {%- include social.html -%}
+
+  <p class="copy">
+    &copy; 2008-{{ 'now' | date: '%Y' }} Marcos G. Zimmermann. All Rights Reserved
+  </p>
+</footer>
