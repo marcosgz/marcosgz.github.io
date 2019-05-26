@@ -152,6 +152,16 @@ MySQL added a few [spatial convenience functions][mysql-spatial-convenience-func
 
 PostgreSQL has also a great extension named [PostGIS][plgis] that provides spatial objects. Strongly recommend the use.
 
+If you are looking for more advanced queries or a complete geocode solution take a look at the [geocoder][geocoder] gem. This gem adds several scopes to the [activerecord][activerecord] according to the examples in the documentation.
+
+{% highlight ruby %}
+Venue.near('Omaha, NE, US')                   # venues within 20 miles of Omaha
+Venue.near([40.71, -100.23], 50)              # venues within 50 miles of a point
+Venue.near([40.71, -100.23], 50, units: :km)  # venues within 50 kilometres of a point
+Venue.geocoded                                # venues with coordinates
+Venue.not_geocoded                            # venues without coordinates
+{% endhighlight %}
+
 
 [great-circle-distance]: https://en.wikipedia.org/wiki/Great-circle_distance
 [sphere]: https://en.wikipedia.org/wiki/Sphere
@@ -163,3 +173,4 @@ PostgreSQL has also a great extension named [PostGIS][plgis] that provides spati
 [arel]: https://github.com/rails/rails/tree/master/activerecord/lib/arel
 [mysql-spatial-convenience-functions]: https://dev.mysql.com/doc/refman/5.7/en/spatial-convenience-functions.html
 [postgis]: https://postgis.net
+[geocoder]: https://github.com/alexreisner/geocoder

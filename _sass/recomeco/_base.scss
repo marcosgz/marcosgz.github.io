@@ -13,6 +13,7 @@ body {
   background-color: #fefefe;
   padding: 0 15px;
 }
+
 .container {
   @include screen-media(md-up) {
     margin: 0 auto;
@@ -71,6 +72,7 @@ ul.post-list {
     }
   }
 }
+
 .page-heading {
   margin-bottom: 15px;
   font-family: 'Montserrat', sans-serif;
@@ -123,10 +125,14 @@ ul.post-list {
 .post {
   .post-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
+    font-size: 2.3em;
+    line-height: 50px;
     font-weight: 800;
-    line-height: 70px;
     letter-spacing: -1px;
+    @include screen-media(sm-up) {
+      font-size: 3em;
+      line-height: 70px;
+    }
   }
 
   .post-meta {

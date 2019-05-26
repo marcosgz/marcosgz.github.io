@@ -53,5 +53,13 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 
 }
 
+$embed-responsive-aspect-ratios: (
+  (21 9),
+  (16 9),
+  (4 3),
+  (1 1)
+) !default;
+
 @import "recomeco/base";
+@import "recomeco/embed-responsive";
 @import "recomeco/syntax-highlighting";

@@ -17,7 +17,9 @@ Como eu estava filmando.. eu não fiz nenhum comentário sobre o assunto. Então
 
 Mais uma noticia!! Eu comprei os dominios marcosz.com.br e marcosz.com. Em breve meu blog estará com nova cara e novo dominio.
 
-<iframe src="https://player.vimeo.com/video/2094245" width="800" height="600" frameborder="0" title="DarkCast - Edição especial RailsSummit" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/2094245" width="100%" height="100%" frameborder="0" title="DarkCast - Edição especial RailsSummit" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 
