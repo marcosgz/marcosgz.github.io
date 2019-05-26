@@ -148,6 +148,11 @@ Address.where(distance_between.to_arel(unit: :kilometers).lteq(1.0))
 # Address Load (14.7ms)  SELECT `addresses`.* FROM `addresses` WHERE ((6371 * acos(cos(radians(40.790505)) * cos(radians(`addresses`.`lat`)) * cos(radians(`addresses`.`lon`) - radians(-73.971719)) + sin(radians(40.790505)) * sin(radians(`addresses`.`lat`)))) <= 1.0)
 {% endhighlight %}
 
+MySQL added a few [spatial convenience functions][mysql-spatial-convenience-functions] since version 5.7.6. And one of those convenience functions is `ST_Distance_Sphere`, which allows one to calculate the (spherical) distance between two points. And it makes things much simpler.
+
+PostgreSQL has also a great extension named [PostGIS][plgis] that provides spatial objects. Strongly recommend the use.
+
+
 [great-circle-distance]: https://en.wikipedia.org/wiki/Great-circle_distance
 [sphere]: https://en.wikipedia.org/wiki/Sphere
 [longitude]: https://en.wikipedia.org/wiki/Longitude
@@ -156,3 +161,5 @@ Address.where(distance_between.to_arel(unit: :kilometers).lteq(1.0))
 [spherical-trigonometry]: https://en.wikipedia.org/wiki/Spherical_trigonometry
 [activerecord]: https://guides.rubyonrails.org/active_record_basics.html
 [arel]: https://github.com/rails/rails/tree/master/activerecord/lib/arel
+[mysql-spatial-convenience-functions]: https://dev.mysql.com/doc/refman/5.7/en/spatial-convenience-functions.html
+[postgis]: https://postgis.net
