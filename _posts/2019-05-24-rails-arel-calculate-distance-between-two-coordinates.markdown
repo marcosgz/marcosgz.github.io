@@ -150,7 +150,7 @@ Address.where(distance_between.to_arel(unit: :kilometers).lteq(1.0))
 
 MySQL added a few [spatial convenience functions][mysql-spatial-convenience-functions] since version 5.7.6. And one of those convenience functions is `ST_Distance_Sphere`, which allows one to calculate the (spherical) distance between two points. And it makes things much simpler.
 
-PostgreSQL has also a great extension named [PostGIS][plgis] that provides spatial objects. Strongly recommend the use.
+PostgreSQL has also a great extension named [PostGIS][postgis] that provides spatial objects. Strongly recommend the use.
 
 If you are looking for more advanced queries or a complete geocode solution take a look at the [geocoder][geocoder] gem. This gem adds several scopes to the [activerecord][activerecord] according to the examples in the documentation.
 
