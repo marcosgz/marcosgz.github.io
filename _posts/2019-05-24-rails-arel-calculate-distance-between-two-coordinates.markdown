@@ -3,7 +3,7 @@ layout: post
 title:  "Calculate distance between two coordinates using ActiveRecord Arel"
 date:   2019-05-24 08:17:15 -0300
 categories: ruby-on-rails
-tags: arel activerecord coordinates geolocation
+tags: arel activerecord coordinates geolocation mysql
 ---
 
 If you had to calculate the distance between two coordinates you probably found several different ways using the haversine formula:
